@@ -15,5 +15,6 @@ function start() {
   app
     .get('/', (req, res) => res.send('index'))
     .get('/about', (req, res) => res.send('about'))
+    .get('/loaderio-34e1f9ea260168c360b5bd9b9a84f3ab', (req, res) => res.send('loaderio-34e1f9ea260168c360b5bd9b9a84f3ab'))
     .listen(PORT, console.log(`Listening on port ${PORT}`));
 };
