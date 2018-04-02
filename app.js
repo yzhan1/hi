@@ -8,18 +8,12 @@ throng({
   lifetime: Infinity
 }, start);
 
-const start = () => {
+function start() {
   const express = require('express');
   const app = express();
 
   app
-    .get('/', index)
-    .get('/about', about)
-    .listen(PORT, onListen);
-
-  const index = (req, res) => res.send('index');
-
-  const about = (req, res) => res.send('about');
-
-  const listen = () => console.log(`Listening on port ${PORT}`);
+    .get('/', (req, res) => res.send('index'))
+    .get('/about', (req, res) => res.send('about'))
+    .listen(PORT, console.log(`Listening on port ${PORT}`));
 };
