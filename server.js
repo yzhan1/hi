@@ -5,14 +5,14 @@ const WORKERS = process.env.WEB_CONCURRENCY || 1;
 const PORT = process.env.PORT || 3000;
 
 throng({
-    workers: WORKERS,
-    lifetime: Infinity
+  workers: WORKERS,
+  lifetime: Infinity
 }, start);
 
 function start() {
-    const express = require('express');
-    const app = express();
-    
-    app.use(router);
-    app.listen(PORT, console.log(`Listening on port ${PORT}`));
+  const express = require('express');
+  const app = express();
+
+  app.use(router);
+  app.listen(PORT, console.log(`Listening on port ${PORT}`));
 };
