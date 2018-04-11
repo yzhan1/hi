@@ -15,7 +15,7 @@ class Controller {
   }
 
   static getLoaderToken(req, res) {
-    res.send('loaderio-e70bc7cc9229c546018c143657c5ce53');
+    res.send('loaderio-dbccb84cd2f9c75a15a3c3e4479977d8');
   }
 }
 

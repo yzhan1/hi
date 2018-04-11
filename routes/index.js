@@ -6,6 +6,6 @@ const router = express.Router();
 router
   .post('*', controller.dispatchPost)
   .get('*', controller.dispatchGet)
-  .get('/loaderio-e70bc7cc9229c546018c143657c5ce53', controller.getLoaderToken);
+  .get('/loaderio-dbccb84cd2f9c75a15a3c3e4479977d8', controller.getLoaderToken);
 
 module.exports = router;
