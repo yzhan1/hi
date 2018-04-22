@@ -8,9 +8,15 @@ class Controller {
   static dispatchGet(req, res) {
     const timestamp = Date.now();
 
-    const url = timestamp % config.base === 0 ? 
-      `${config.reader1}${req.url}`: 
-      `${config.reader2}${req.url}`;
+    let url;
+    const mod = timestamp % config.base;
+    if (mod === 0) {
+      url = `${config.reader1}${req.url}`;
+    } else if (mod === 1) {
+      url = `${config.reader2}${req.url}`;
+    } else {
+      url = `${config.reader3}${req.url}`;
+    }
     res.redirect(307, url);
   }
 
