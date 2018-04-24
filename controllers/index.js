@@ -13,9 +13,9 @@ class Controller {
     if (mod === 0 || mod === 1) {
       url = `${config.reader1}${req.url}`;
     } else if (mod === 2 || mod === 3) {
-      url = `${config.writer}${req.url}`;
-    } else {
       url = `${config.reader2}${req.url}`;
+    } else {
+      url = `${config.writer}${req.url}`;
     }
     res.redirect(307, url);
   }
