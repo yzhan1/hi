@@ -12,7 +12,7 @@ class Controller {
     const mod = timestamp % config.base;
     if (mod === 0) {
       url = `${config.reader1}${req.url}`;
-    } else if (mod === 1) {
+    } else  {
       url = `${config.reader2}${req.url}`;
     }
     // } else {
