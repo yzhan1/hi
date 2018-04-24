@@ -10,12 +10,12 @@ class Controller {
 
     let url;
     const mod = timestamp % config.base;
-    if (0 <= mod && mod <= 2) {
+    if (mod === 0 || mod === 1) {
       url = `${config.reader1}${req.url}`;
-    } else if (3 <= mod && mod <= 5) {
-      url = `${config.reader2}${req.url}`;
+    } else if (mod === 2 || mod === 3) {
+      url = `${config.writer}${req.url}`;
     } else {
-      url = `${config.reader3}${req.url}`;
+      url = `${config.reader2}${req.url}`;
     }
     res.redirect(307, url);
   }
