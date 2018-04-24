@@ -10,9 +10,9 @@ class Controller {
 
     let url;
     const mod = timestamp % config.base;
-    if (mod === 0 || mod === 1) {
+    if (0 <= mod && mod <= 2) {
       url = `${config.reader1}${req.url}`;
-    } else if (mod === 2 || mod === 3) {
+    } else if (3 <= mod && mod <= 5) {
       url = `${config.reader2}${req.url}`;
     } else {
       url = `${config.reader3}${req.url}`;
